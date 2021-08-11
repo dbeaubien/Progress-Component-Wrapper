@@ -1,0 +1,17 @@
+﻿{
+	"author": "Dani Beaubien",
+	"copyrights": "Copyright 2021 Open Road Development, Inc.",
+	"version": "2021.r1 (build 20210810)",
+	"buildDate": "2021-08-10",
+	"url": "http://openroaddevelopment.com",
+	"manifestFormatVersion": "1.0",
+	"buildWith4DVersion": "v18 R6 final (build 264867)",
+	"methodList": [
+		"Progress_New",
+		"Progress_Quit",
+		"Progress_SetButtonEnabled",
+		"Progress_SetMessage",
+		"Progress_SetProgress",
+		"Progress_SetTitle"
+	]
+}

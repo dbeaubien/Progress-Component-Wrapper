@@ -1,0 +1,5 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE base SYSTEM "http://www.4d.com/dtd/2007/base.dtd" >
+<base name="Progress Wrapper" uuid="33025D7CB01F4708AA9A2C9AF443DA3F" collation_locale="en">
+	<schema name="DEFAULT_SCHEMA"/>
+</base>

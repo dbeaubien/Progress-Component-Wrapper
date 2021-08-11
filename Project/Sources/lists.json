@@ -1,0 +1,12 @@
+﻿{
+	"BuildNo": {
+		"items": [
+			{
+				"text": "{\"releaseYear\":\"2021\",\"releaseNo\":\"r1\",\"buildNo\":\"20210810\",\"versionShort\":\"2021.r1\",\"versionLong\":\"2021.r1 (build 20210810)\"}",
+				"ref": 1,
+				"editable": true,
+				"collapsed": true
+			}
+		]
+	}
+}
