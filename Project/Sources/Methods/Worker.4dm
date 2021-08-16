@@ -20,6 +20,9 @@ var $progressIdentifier : Integer
 $progressIdentifier:=Num:C11($inputs.progressId)
 
 Case of 
+	: ($action="DIE")
+		KILL WORKER:C1390(Current process:C322)
+		
 	: ($action="NEW")
 		$progressIdentifier:=Progress New()
 		Use ($signal)

@@ -56,3 +56,6 @@ C_BOOLEAN:C305(Progress_Stopped; $0)
 
 //Progress_Stopped
 C_LONGINT:C283(Progress_Stopped; $1)
+
+//WorkerName
+C_TEXT:C284(WorkerName; $0)

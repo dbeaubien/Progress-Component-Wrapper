@@ -19,7 +19,8 @@ var $signal : Object
 var $signaled : Boolean
 $signal:=New signal:C1641("progress signal")
 
-CALL WORKER:C1389(1; "Worker"; "QUIT"; $signal; $inputs)
+CALL WORKER:C1389(WorkerName; "Worker"; "QUIT"; $signal; $inputs)
+CALL WORKER:C1389(WorkerName; "Worker"; "DIE"; $signal; $inputs)  // we are done with this now.
 
 $signaled:=$signal.wait(2)  // wait for 2 seconds max
 
