@@ -22,10 +22,10 @@ If (Not:C34(Is compiled mode:C492)) & (Structure file:C489(*)=Structure file:C48
 	ARRAY TEXT:C222($at_components; 0)
 	COMPONENT LIST:C1001($at_components)
 	If (Find in array:C230($at_components; "Code Analysis")>0)
-		CA_ShowQuickLauncher
+		EXECUTE METHOD:C1007("CA_OnStartup")
 	End if 
 	If (Find in array:C230($at_components; "CodeSnippets")>0)
-		Snippet_ShowSelectorWindow
+		EXECUTE METHOD:C1007("Snippet_ShowSelectorWindow")
 	End if 
 	
 	If (Find in array:C230($at_components; "Mainfest Generator")>0)
