@@ -1,8 +1,8 @@
-﻿{
+{
 	"BuildNo": {
 		"items": [
 			{
-				"text": "{\"releaseYear\":\"2021\",\"releaseNo\":\"r3\",\"buildNo\":\"20210818\",\"versionShort\":\"2021.r3\",\"versionLong\":\"2021.r3 (build 20210818)\"}",
+				"text": "{\"releaseYear\":\"2021\",\"releaseNo\":\"r5\",\"buildNo\":\"20211029\",\"versionShort\":\"2021.r5\",\"versionLong\":\"2021.r5 (build 20211029)\"}",
 				"ref": 1,
 				"editable": true,
 				"collapsed": true
