@@ -1,4 +1,4 @@
-﻿{
+{
 	"destination": "detailScreen",
 	"windowSizingX": "fixed",
 	"windowSizingY": "fixed",
@@ -195,10 +195,11 @@
 					"left": 260,
 					"width": 105,
 					"height": 16,
-					"stroke": "#000000",
+					"stroke": "automatic",
 					"class": "default",
 					"textAlign": "left",
-					"text": "Current Value"
+					"text": "Current Value",
+					"fontWeight": "bold"
 				},
 				"string_buildNo": {
 					"type": "input",
@@ -224,10 +225,11 @@
 					"left": 30,
 					"width": 75,
 					"height": 16,
-					"stroke": "#000000",
+					"stroke": "automatic",
 					"class": "default",
 					"textAlign": "left",
-					"text": "Year"
+					"text": "Year",
+					"fontWeight": "bold"
 				},
 				"string_releaseNo": {
 					"type": "input",
@@ -252,10 +254,11 @@
 					"left": 131,
 					"width": 85,
 					"height": 16,
-					"stroke": "#000000",
+					"stroke": "automatic",
 					"class": "default",
 					"textAlign": "left",
-					"text": "Release No"
+					"text": "Release No",
+					"fontWeight": "bold"
 				},
 				"Text3": {
 					"type": "text",
