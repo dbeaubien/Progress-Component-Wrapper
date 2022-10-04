@@ -1,70 +1,58 @@
 //%attributes = {"invisible":true,"preemptive":"incapable"}
 // Worker (action, signal; inputs)
 //
-// DESCRIPTION
-//   
-//
-var $1; $action : Text
-var $2; $signal : Object
-var $3; $inputs : Object
-// ----------------------------------------------------
-// HISTORY
-//   Created by: DB (08/10/2021)
+#DECLARE($action : Text\
+; $signal : Object\
+; $inputs : Object)
 // ----------------------------------------------------
 ASSERT:C1129(Count parameters:C259=3)
-$action:=$1
-$signal:=$2
-$inputs:=$3
 
-var $progressIdentifier : Integer
-$progressIdentifier:=Num:C11($inputs.progressId)
+var $progress_identifier : Integer
+$progress_identifier:=Num:C11($inputs.progressId)
 
 Case of 
-	: ($action="DIE")
-		KILL WORKER:C1390(Current process:C322)
-		
 	: ($action="NEW")
-		$progressIdentifier:=Progress New()
+		$progress_identifier:=Progress New()
 		Use ($signal)
-			$signal.progressId:=$progressIdentifier
+			$signal.progressId:=$progress_identifier
 		End use 
 		
 		
 	: ($action="QUIT")
-		Progress QUIT($progressIdentifier)
+		Progress QUIT($progress_identifier)
 		
 		
 	: ($action="SET TITLE")
 		Case of 
 			: ($inputs.numParameters=2)
-				Progress SET TITLE($progressIdentifier; $inputs.title)
+				Progress SET TITLE($progress_identifier; $inputs.title)
 			: ($inputs.numParameters=3)
-				Progress SET TITLE($progressIdentifier; $inputs.title; $inputs.progress)
+				Progress SET TITLE($progress_identifier; $inputs.title; $inputs.progress)
 			: ($inputs.numParameters=4)
-				Progress SET TITLE($progressIdentifier; $inputs.title; $inputs.progress; $inputs.subTitle)
+				Progress SET TITLE($progress_identifier; $inputs.title; $inputs.progress; $inputs.subTitle)
 		End case 
 		
 		
 	: ($action="SET MESSAGE")
-		Progress SET MESSAGE($progressIdentifier; $inputs.subTitle)
+		Progress SET MESSAGE($progress_identifier; $inputs.subTitle)
 		
 		
 	: ($action="SET PROGRESS")
 		Case of 
 			: ($inputs.numParameters=2)
-				Progress SET PROGRESS($progressIdentifier; $inputs.progress)
+				Progress SET PROGRESS($progress_identifier; $inputs.progress)
 			: ($inputs.numParameters=3)
-				Progress SET PROGRESS($progressIdentifier; $inputs.progress; $inputs.subTitle)
+				Progress SET PROGRESS($progress_identifier; $inputs.progress; $inputs.subTitle)
 		End case 
 		
 		
 	: ($action="SET BUTTON ENABLED")
-		Progress SET BUTTON ENABLED($progressIdentifier; $inputs.isEnabled)
+		Progress SET BUTTON ENABLED($progress_identifier; $inputs.isEnabled)
 		
 		
 	: ($action="WAS STOPPED?")
 		Use ($signal)
-			$signal.wasStopped:=Progress Stopped($progressIdentifier)
+			$signal.wasStopped:=Progress Stopped($progress_identifier)
 		End use 
 		
 End case 
