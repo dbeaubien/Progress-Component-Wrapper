@@ -1,0 +1,121 @@
+{
+	"_method_": {
+		"Progress_SetButtonEnabled": {
+			"Syntax": "**Progress_SetButtonEnabled**( *progress_identifier* : Integer; *isEnabled* : Boolean )",
+			"Params": [
+				[
+					"progress_identifier",
+					"Integer",
+					"->"
+				],
+				[
+					"isEnabled",
+					"Boolean",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"Progress_Quit": {
+			"Syntax": "**Progress_Quit**( *progress_identifier* : Integer )",
+			"Params": [
+				[
+					"progress_identifier",
+					"Integer",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"Progress_SetProgress": {
+			"Syntax": "**Progress_SetProgress**( *progress_identifier* : Integer; *progress* : Real; *subTitleMessage* : Text )",
+			"Params": [
+				[
+					"progress_identifier",
+					"Integer",
+					"->"
+				],
+				[
+					"progress",
+					"Real",
+					"->"
+				],
+				[
+					"subTitleMessage",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"Progress_SetTitle": {
+			"Syntax": "**Progress_SetTitle**( *progress_identifier* : Integer; *titleMessage* : Text; *progress* : Real; *subTitleMessage* : Text )",
+			"Params": [
+				[
+					"progress_identifier",
+					"Integer",
+					"->"
+				],
+				[
+					"titleMessage",
+					"Text",
+					"->"
+				],
+				[
+					"progress",
+					"Real",
+					"->"
+				],
+				[
+					"subTitleMessage",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"Progress_Stopped": {
+			"Syntax": "**Progress_Stopped**( *progress_identifier* : Integer )->wasStopped : Boolean",
+			"Params": [
+				[
+					"progress_identifier",
+					"Integer",
+					"->"
+				],
+				[
+					"wasStopped",
+					"Boolean",
+					"<-"
+				]
+			],
+			"Summary": ""
+		},
+		"Progress_SetMessage": {
+			"Syntax": "**Progress_SetMessage**( *progress_identifier* : Integer; *subTitleMessage* : Text )",
+			"Params": [
+				[
+					"progress_identifier",
+					"Integer",
+					"->"
+				],
+				[
+					"subTitleMessage",
+					"Text",
+					"->"
+				]
+			],
+			"Summary": ""
+		},
+		"Progress_New": {
+			"Syntax": "**Progress_New**()->progress_identifier : Integer",
+			"Params": [
+				[
+					"progress_identifier",
+					"Integer",
+					"<-"
+				]
+			],
+			"Summary": ""
+		}
+	}
+}
