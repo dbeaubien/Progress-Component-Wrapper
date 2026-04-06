@@ -1,8 +1,5 @@
 //%attributes = {"invisible":true}
 
-C_POINTER:C301(Array_SetSize; ${2})
-C_LONGINT:C283(Array_SetSize; $1)
-
 //Progress_Quit
 C_LONGINT:C283(Progress_Quit; $0)
 C_LONGINT:C283(Progress_Quit; $1)

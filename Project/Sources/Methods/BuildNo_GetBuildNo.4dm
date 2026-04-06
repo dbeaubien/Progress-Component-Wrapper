@@ -7,31 +7,30 @@
 //
 //   NOTE: Cannot be run in a pre-emptive process.
 //
-C_OBJECT:C1216($0; $vo_buildNoObj)
-// ----------------------------------------------------
-// HISTORY
-//   Created by: DB (05/29/2017)
+#DECLARE()->$buildNoInfo : Object
 // ----------------------------------------------------
 
 ARRAY TEXT:C222($at_buildNo; 0)
 LIST TO ARRAY:C288("BuildNo"; $at_buildNo)
-Array_SetSize(1; ->$at_buildNo)  // Make sure there is at least one element 
 
-C_TEXT:C284($vt_value)
-$vt_value:=$at_buildNo{1}
-
-If ($vt_value#"") & ($vt_value="{@")
-	$vo_buildNoObj:=JSON Parse:C1218($vt_value)
-Else 
-	$vo_buildNoObj:=JSON Parse:C1218("{}")
-	OB SET:C1220($vo_buildNoObj; "releaseYear"; String:C10(Year of:C25(Current date:C33)))
-	OB SET:C1220($vo_buildNoObj; "releaseNo"; "r1")
-	OB SET:C1220($vo_buildNoObj; "buildNo"; Date2String(Current date:C33; "yyyymmdd"))
-	OB SET:C1220($vo_buildNoObj; "versionShort"; String:C10(Year of:C25(Current date:C33))+".r1")
-	OB SET:C1220($vo_buildNoObj; "versionLong"; String:C10(Year of:C25(Current date:C33))+".r1 (build "+Date2String(Current date:C33; "yyyymmdd")+")")
-	$at_buildNo{1}:=JSON Stringify:C1217($vo_buildNoObj)
-	ARRAY TO LIST:C287($at_buildNo; "BuildNo")
+If (Size of array:C274($at_buildNo)=0)  // Make sure there is at least one element 
+	APPEND TO ARRAY:C911($at_buildNo; "")
 End if 
 
+var $value : Text
+$value:=$at_buildNo{1}
 
-$0:=$vo_buildNoObj
+If ($value#"") & ($value="{@")
+	$buildNoInfo:=JSON Parse:C1218($value)
+	
+Else 
+	$buildNoInfo:={}
+	$buildNoInfo.releaseYear:=String:C10(Year of:C25(Current date:C33))
+	$buildNoInforeleaseNo:="r1"
+	$buildNoInfobuildNo:=Date2String(Current date:C33; "yyyymmdd")
+	$buildNoInfoversionShort:=String:C10(Year of:C25(Current date:C33))+".r1"
+	$buildNoInfoversionLong:=String:C10(Year of:C25(Current date:C33))+".r1 (build "+Date2String(Current date:C33; "yyyymmdd")+")"
+	
+	$at_buildNo{1}:=JSON Stringify:C1217($buildNoInfo)
+	ARRAY TO LIST:C287($at_buildNo; "BuildNo")
+End if 

@@ -6,9 +6,6 @@
 //
 #DECLARE($progress_identifier : Integer)
 // ----------------------------------------------------
-// HISTORY
-//   Created by: DB (08/10/2021)
-// ----------------------------------------------------
 ASSERT:C1129(Count parameters:C259=1)
 
 var $inputs : Object
