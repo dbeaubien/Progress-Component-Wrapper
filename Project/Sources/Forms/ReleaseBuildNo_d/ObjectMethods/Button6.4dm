@@ -1,5 +1,5 @@
 
-C_POINTER:C301($vp_stringYear)
+var $vp_stringYear : Pointer
 $vp_stringYear:=OBJECT Get data source:C1265(*; "string_year")
 
 If (Not:C34(Is nil pointer:C315($vp_stringYear)))

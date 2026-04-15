@@ -1,4 +1,4 @@
-C_POINTER:C301($vp_stringBuildNo)
+var $vp_stringBuildNo : Pointer
 $vp_stringBuildNo:=OBJECT Get data source:C1265(*; "string_buildNo")
 
 If (Not:C34(Is nil pointer:C315($vp_stringBuildNo)))

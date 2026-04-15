@@ -1,5 +1,5 @@
 
-C_POINTER:C301($vp_stringReleaseNo)
+var $vp_stringReleaseNo : Pointer
 $vp_stringReleaseNo:=OBJECT Get data source:C1265(*; "string_releaseNo")
 
 If (Not:C34(Is nil pointer:C315($vp_stringReleaseNo)))
