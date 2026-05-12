@@ -12,6 +12,14 @@
 		"4D Widgets": {
 			"github": "4d/4D-Widgets",
 			"version": "4d"
+		},
+		"CodeSnippets": {
+			"github": "dbeaubien/CodeSnippets",
+			"version": "latest"
+		},
+		"Manifest-Generator-4D-Component": {
+			"github": "dbeaubien/Manifest-Generator-4D-Component",
+			"version": "latest"
 		}
 	}
 }
