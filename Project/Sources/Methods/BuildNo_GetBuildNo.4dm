@@ -26,10 +26,10 @@ If ($value#"") & ($value="{@")
 Else 
 	$buildNoInfo:={}
 	$buildNoInfo.releaseYear:=String:C10(Year of:C25(Current date:C33))
-	$buildNoInforeleaseNo:="r1"
-	$buildNoInfobuildNo:=Date2String(Current date:C33; "yyyymmdd")
-	$buildNoInfoversionShort:=String:C10(Year of:C25(Current date:C33))+".r1"
-	$buildNoInfoversionLong:=String:C10(Year of:C25(Current date:C33))+".r1 (build "+Date2String(Current date:C33; "yyyymmdd")+")"
+	$buildNoInfo.releaseNo:="r1"
+	$buildNoInfo.buildNo:=Date2String(Current date:C33; "yyyymmdd")
+	$buildNoInfo.versionShort:=String:C10(Year of:C25(Current date:C33))+".r1"
+	$buildNoInfo.versionLong:=String:C10(Year of:C25(Current date:C33))+".r1 (build "+Date2String(Current date:C33; "yyyymmdd")+")"
 	
 	$at_buildNo{1}:=JSON Stringify:C1217($buildNoInfo)
 	ARRAY TO LIST:C287($at_buildNo; "BuildNo")
